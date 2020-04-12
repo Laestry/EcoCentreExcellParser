@@ -26,6 +26,7 @@ fun main(args: Array<String>) {
     FirebaseApp.initializeApp(options)
 
     val db: Firestore = FirestoreClient.getFirestore()
+    
     val docRef = db.collection("user")
 
 
