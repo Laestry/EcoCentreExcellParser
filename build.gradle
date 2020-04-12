@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.71'
+}
+
+group 'ru.cadmean'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.apache.poi', name: 'poi', version: '3.9'
+//    compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '3.9'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
+//    compile group: 'com.google.gms', name:'google-services', version: '4.3.3'
+//    compile group: 'com.google.firebase', name:'firebase-firestore', version: '21.4.2'
+    implementation 'com.google.firebase:firebase-admin:6.12.2'
+    implementation 'com.google.firebase:firebase-firestore:21.4.2'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
